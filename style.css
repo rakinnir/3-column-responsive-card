@@ -1,0 +1,131 @@
+/* --------------- */
+/* css reset  */
+/* -------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --------------- */
+/* declaring variables  */
+/* --------------- */
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+/* ------------ */
+/* Utility classes */
+/* ------------ */
+
+/* background color  */
+.bg-orange {
+  background-color: var(--bright-orange);
+}
+.bg-dark-cyan {
+  background-color: var(--dark-cyan);
+}
+.bg-very-dark-cyan {
+  background-color: var(--very-dark-cyan);
+}
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+
+/* text color  */
+.text-orange {
+  color: var(--bright-orange);
+}
+.text-dark-cyan {
+  color: var(--dark-cyan);
+}
+.text-very-dark-cyan {
+  color: var(--very-dark-cyan);
+}
+.text-transparent-white {
+  color: var(--transparent-white);
+  font-weight: 100;
+}
+.text-light-gray {
+  color: var(--light-gray);
+}
+
+/* fonts  */
+.fs-l {
+  font-size: 2.5rem;
+}
+.fs-m {
+  font-size: 1.5rem;
+}
+.fs-sm {
+  font-size: 1rem;
+}
+.ff-bigshoulder {
+  font-family: "Big Shoulders Display", cursive;
+}
+.ff-lexend {
+  font-family: "Lexend Deca", sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.line-height {
+  line-height: 1.7;
+}
+/* -------------- */
+/* custom css  */
+/* -------------- */
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  margin: 2rem;
+  border-radius: 1.5rem;
+}
+section > :nth-child(1) {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+section > :nth-child(3) {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+div {
+  padding: 3rem;
+  max-width: 40rem;
+}
+div > :not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+button {
+  font: inherit;
+  font-weight: 600;
+  min-width: 40%;
+  min-height: 9vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  border: none;
+}
+
+/* ---------------- */
+/* media-query  */
+/* ---------------- */
+@media (min-width: 800px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  section > :nth-child(1) {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  section > :nth-child(3) {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+}
