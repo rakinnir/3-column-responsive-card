@@ -16,6 +16,7 @@
   --very-dark-cyan: hsl(179, 100%, 13%);
   --transparent-white: hsla(0, 0%, 100%, 0.75);
   --light-gray: hsl(0, 0%, 95%);
+  --hover-color: hsl(31, 77%, 52%);
 }
 
 /* ------------ */
@@ -86,7 +87,7 @@ html {
 }
 section {
   margin: 2rem;
-  border-radius: 1.5rem;
+  /* border-radius: 1.5rem; */
 }
 section > :nth-child(1) {
   border-radius: 0.5rem 0.5rem 0 0;
@@ -113,17 +114,23 @@ button {
   border-radius: 2rem;
   border: none;
 }
+button:hover,
+button:focus {
+  background-color: var(--hover-color);
+  color: var(--light-gray);
+  border: 2px solid var(--light-gray);
+  font-weight: 500;
+}
 
 /* ---------------- */
 /* media-query  */
 /* ---------------- */
 @media (min-width: 800px) {
   html {
-    min-height:100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+  }
   section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
